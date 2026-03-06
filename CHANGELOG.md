@@ -1,5 +1,13 @@
 # Changelog
 
+### v2.2.18 (2026-03-06)
+
+**Other changes:**
+
+- chore(metadata): update package metadata (● [9696fe7](https://github.com/corejslib/app-text-search/commit/9696fe7); 👬 zdm)
+
+Compare with the previous release: [v2.2.17](https://github.com/corejslib/app-text-search/compare/v2.2.17...v2.2.18)
+
 ### v2.2.17 (2026-02-05)
 
 **Other changes:**
