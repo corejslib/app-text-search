@@ -1,5 +1,13 @@
 # Changelog
 
+### v2.2.20 (2026-04-20)
+
+**Code refactoring:**
+
+- \[PATCH] refactor: update .editorconfig (● [e087f05](https://github.com/corejslib/app-text-search/commit/e087f05); 👬 zdm)
+
+Compare with the previous release: [v2.2.19...v2.2.20](https://github.com/corejslib/app-text-search/compare/v2.2.19...v2.2.20)
+
 ### v2.2.19 (2026-03-18)
 
 **Other changes:**
