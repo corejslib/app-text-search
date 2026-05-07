@@ -1,5 +1,13 @@
 # Changelog
 
+### v2.2.21 (2026-05-07)
+
+**Code refactoring:**
+
+- \[PATCH] refactor: rename cli.config.yaml to scli.config.yaml (● [5d32a31](https://github.com/corejslib/app-text-search/commit/5d32a31); 👬 zdm)
+
+Compare with the previous release: [v2.2.20...v2.2.21](https://github.com/corejslib/app-text-search/compare/v2.2.20...v2.2.21)
+
 ### v2.2.20 (2026-04-20)
 
 **Code refactoring:**
