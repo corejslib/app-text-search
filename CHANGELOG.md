@@ -1,5 +1,13 @@
 # Changelog
 
+### v2.2.24 (2026-05-28)
+
+**Other changes:**
+
+- build: remove registries from .npmrc (● [9a1aaa4](https://github.com/corejslib/app-text-search/commit/9a1aaa4); 👬 zdm)
+
+Compare with the previous release: [v2.2.23...v2.2.24](https://github.com/corejslib/app-text-search/compare/v2.2.23...v2.2.24)
+
 ### v2.2.23 (2026-05-16)
 
 **Other changes:**
