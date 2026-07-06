@@ -1,5 +1,13 @@
 # Changelog
 
+### v2.2.26 (2026-07-06)
+
+**Other changes:**
+
+- build(deps): bunp @corejslib/core@^8.0.0 (● [5e84742](https://github.com/corejslib/app-text-search/commit/5e84742); 👬 zdm)
+
+Compare with the previous release: [v2.2.25...v2.2.26](https://github.com/corejslib/app-text-search/compare/v2.2.25...v2.2.26)
+
 ### v2.2.25 (2026-07-02)
 
 **Bug fixes:**
