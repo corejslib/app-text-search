@@ -38,6 +38,6 @@
         "gpt-tokenizer": "^3.0.0"
     },
     "peerDependencies": {
-        "@corejslib/core": "^7.101.6"
+        "@corejslib/core": "^8.0.0"
     }
 }
