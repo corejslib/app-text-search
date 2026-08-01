@@ -1,5 +1,13 @@
 # Changelog
 
+### v2.2.27 (2026-08-01)
+
+**Bug fixes:**
+
+- \[PATCH] fix: update package keywords (● [2879f5a](https://github.com/corejslib/app-text-search/commit/2879f5a); 👬 zdm)
+
+Compare with the previous release: [v2.2.26...v2.2.27](https://github.com/corejslib/app-text-search/compare/v2.2.26...v2.2.27)
+
 ### v2.2.26 (2026-07-06)
 
 **Other changes:**
