@@ -1,5 +1,13 @@
 # Changelog
 
+### v2.2.29 (2026-08-04)
+
+**Other changes:**
+
+- chore: rename ccli to zcli (● [9e60cd5](https://github.com/corejslib/app-text-search/commit/9e60cd5), [5e4d4c3](https://github.com/corejslib/app-text-search/commit/5e4d4c3), [3ffeb36](https://github.com/corejslib/app-text-search/commit/3ffeb36); 👬 zdm)
+
+Compare with the previous release: [v2.2.28...v2.2.29](https://github.com/corejslib/app-text-search/compare/v2.2.28...v2.2.29)
+
 ### v2.2.28 (2026-08-01)
 
 **Other changes:**
