@@ -1,5 +1,13 @@
 # Changelog
 
+### v2.2.30 (2026-08-16)
+
+**Other changes:**
+
+- build(deps): bunp gpt-tokenizer\@4.0.0 (● [ede69c3](https://github.com/corejslib/app-text-search/commit/ede69c3); 👬 zdm)
+
+Compare with the previous release: [v2.2.29...v2.2.30](https://github.com/corejslib/app-text-search/compare/v2.2.29...v2.2.30)
+
 ### v2.2.29 (2026-08-04)
 
 **Other changes:**
