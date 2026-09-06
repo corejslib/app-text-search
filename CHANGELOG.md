@@ -1,5 +1,13 @@
 # Changelog
 
+### v2.2.31 (2026-09-06)
+
+**Code refactoring:**
+
+- \[PATCH] refactor: use var prefixes in sql functions (● [edd0cdd](https://github.com/corejslib/app-text-search/commit/edd0cdd), [4b732a5](https://github.com/corejslib/app-text-search/commit/4b732a5), [048d75b](https://github.com/corejslib/app-text-search/commit/048d75b), [e908953](https://github.com/corejslib/app-text-search/commit/e908953); 👬 zdm)
+
+Compare with the previous release: [v2.2.30...v2.2.31](https://github.com/corejslib/app-text-search/compare/v2.2.30...v2.2.31)
+
 ### v2.2.30 (2026-08-16)
 
 **Other changes:**
