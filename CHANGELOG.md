@@ -471,7 +471,7 @@ Fixes:
 
 Fixes:
 
-- fix: SET maintenance\_work\_mem removed
+- fix: SET maintenance_work_mem removed
 
 ### 2.0.0 (2024-08-28)
 
