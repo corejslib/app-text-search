@@ -1,5 +1,13 @@
 # Changelog
 
+### v2.2.34 (2026-10-04)
+
+**Other changes:**
+
+- docs: fix changelog maintenance_work_mem entry (● [268261b](https://github.com/corejslib/app-text-search/commit/268261b); 👬 zdm)
+
+Compare with the previous release: [v2.2.33...v2.2.34](https://github.com/corejslib/app-text-search/compare/v2.2.33...v2.2.34)
+
 ### v2.2.33 (2026-09-15)
 
 **Other changes:**
