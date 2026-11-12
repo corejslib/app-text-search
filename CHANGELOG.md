@@ -1,5 +1,17 @@
 # Changelog
 
+### v2.2.35 (2026-11-12)
+
+**Code refactoring:**
+
+- \[PATCH] refactor: rename softvisio_types extension to softvisio (● [cc68c49](https://github.com/corejslib/app-text-search/commit/cc68c49); 👬 zdm)
+
+**Other changes:**
+
+- docs: update (● [f55c313](https://github.com/corejslib/app-text-search/commit/f55c313); 👬 zdm)
+
+Compare with the previous release: [v2.2.34...v2.2.35](https://github.com/corejslib/app-text-search/compare/v2.2.34...v2.2.35)
+
 ### v2.2.34 (2026-10-04)
 
 **Other changes:**
