@@ -1,5 +1,88 @@
 # API
 
+## Simple search
+
+PostgreSQL:
+
+```sql
+CREATE EXTENSION IF NOT EXISTS softvisio;
+CREATE EXTENSION IF NOT EXISTS pg_trgm;
+
+CREATE TABLE t (
+    id serial8 PRIMARY KEY,
+    col text NOT NULL
+);
+
+-- create only the indexes that you use
+
+-- LIKE: "=" and prefix search ( 'abc%' )
+CREATE INDEX t_col_normalize_text_idx ON t ( normalize_text( col ) text_pattern_ops );
+
+-- LIKE: substring search ( '%abc%' ), patterns shorter than 3 characters are not accelerated
+CREATE INDEX t_col_normalize_text_trgm_idx ON t USING gin ( normalize_text( col ) gin_trgm_ops );
+
+-- ILIKE: "=" and prefix search ( 'abc%' )
+CREATE INDEX t_col_normalize_casefold_idx ON t ( normalize_casefold( col ) text_pattern_ops );
+
+-- ILIKE: substring search ( '%abc%' )
+CREATE INDEX t_col_normalize_casefold_trgm_idx ON t USING gin ( normalize_casefold( col ) gin_trgm_ops );
+
+-- was: col LIKE $1
+-- SELECT * FROM t WHERE normalize_text( col ) LIKE normalize_text( $1 );
+
+-- was: col ILIKE $1
+-- SELECT * FROM t WHERE normalize_casefold( col ) LIKE normalize_casefold( $1 );
+```
+
+SQLite:
+
+```sql
+CREATE TABLE t (
+    id INTEGER PRIMARY KEY,
+    col TEXT NOT NULL
+);
+
+-- create only the indexes that you use
+
+-- LIKE: "=" search
+CREATE INDEX t_col_normalize_text_idx ON t ( normalize_text( col ) );
+
+-- ILIKE: "=" search
+CREATE INDEX t_col_normalize_casefold_idx ON t ( normalize_casefold( col ) );
+
+-- ILIKE: substring search ( '%abc%' ), patterns shorter than 3 characters fall back to scan
+-- normalized values are stored only inside this index table
+CREATE VIRTUAL TABLE t_fts USING fts5 ( col_normalized, tokenize = 'trigram' );
+
+CREATE TRIGGER t_ai AFTER INSERT ON t BEGIN
+    INSERT INTO t_fts ( rowid, col_normalized ) VALUES ( new.id, normalize_casefold( new.col ) );
+END;
+
+CREATE TRIGGER t_ad AFTER DELETE ON t BEGIN
+    DELETE FROM t_fts WHERE rowid = old.id;
+END;
+
+CREATE TRIGGER t_au AFTER UPDATE OF col ON t BEGIN
+    UPDATE t_fts SET col_normalized = normalize_casefold( new.col ) WHERE rowid = old.id;
+END;
+
+-- fill the index for existing rows
+-- INSERT INTO t_fts ( rowid, col_normalized ) SELECT id, normalize_casefold( col ) FROM t;
+
+-- SQLite LIKE has no default escape character, PostgreSQL uses backslash,
+-- so ESCAPE '\' is required to make patterns like 'a\%b' work the same way
+
+-- was: col LIKE ?
+-- SELECT * FROM t WHERE normalize_text( col ) LIKE normalize_text( ? ) ESCAPE '\';
+
+-- was: col ILIKE ?
+-- SELECT * FROM t WHERE id IN ( SELECT rowid FROM t_fts WHERE col_normalized LIKE normalize_casefold( ? ) );
+
+-- ESCAPE disables the trigram index of FTS5 (checked on SQLite 3.45.1, it falls back to a scan of t_fts),
+-- so for ILIKE add ESCAPE '\' only if the pattern contains a backslash, the result is the same without it:
+-- SELECT * FROM t WHERE id IN ( SELECT rowid FROM t_fts WHERE col_normalized LIKE normalize_casefold( ? ) ESCAPE '\' );
+```
+
 ## Full-text search
 
 ```sql
