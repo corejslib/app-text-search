@@ -1,5 +1,13 @@
 # Changelog
 
+### v2.2.36 (2026-11-13)
+
+**Other changes:**
+
+- docs: update normalization function names to NFC variants (● [b9a14df](https://github.com/corejslib/app-text-search/commit/b9a14df); 👬 zdm)
+
+Compare with the previous release: [v2.2.35...v2.2.36](https://github.com/corejslib/app-text-search/compare/v2.2.35...v2.2.36)
+
 ### v2.2.35 (2026-11-12)
 
 **Code refactoring:**
