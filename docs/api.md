@@ -2,7 +2,15 @@
 
 ## Simple search
 
+Functions:
+
+`normalize_nfc ( text )` - normalize unicode. For example: `e\u{301}` ( `e ́` ) to `é`.
+
+`normalize_nfc_casefold ( text )` - used for case-insensitive comparison. Normalize NFC and case. For example: `UPPER straße` to `upper strasse`.
+
 PostgreSQL:
+
+`ILIKE` in PostgreSQL use `LOWER` to normalize case. `casefold()` is more correct than `LOWER` so we use `normalize_nfc_casefold()` function instead of `ILIKE`.
 
 ```sql
 CREATE EXTENSION IF NOT EXISTS softvisio;
@@ -35,6 +43,10 @@ CREATE INDEX t_col_normalize_nfc_casefold_trgm_idx ON t USING gin ( normalize_nf
 ```
 
 SQLite:
+
+In SQLite `LIKE` is case-insensitive, so we use `normalize_nfc()` to make if case-sensitive, like in PostgreSQL.
+
+In SQLite we use `normalize_nfc_casefold()` for case-insensitive search because there is no `ILIKE` and `LOWER` works only with `ASCII` charset.
 
 ```sql
 CREATE TABLE t (
