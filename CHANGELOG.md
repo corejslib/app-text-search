@@ -1,5 +1,13 @@
 # Changelog
 
+### v2.2.37 (2026-11-13)
+
+**Other changes:**
+
+- docs: update (● [5881861](https://github.com/corejslib/app-text-search/commit/5881861); 👬 zdm)
+
+Compare with the previous release: [v2.2.36...v2.2.37](https://github.com/corejslib/app-text-search/compare/v2.2.36...v2.2.37)
+
 ### v2.2.36 (2026-11-13)
 
 **Other changes:**
