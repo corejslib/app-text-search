@@ -1,6 +1,2 @@
 dependencies:
   - "@corejslib/app"
-
-components: ~
-
-config: ~
