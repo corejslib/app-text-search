@@ -1,5 +1,13 @@
 # Changelog
 
+### v2.2.38 (2026-11-21)
+
+**Code refactoring**:
+
+- \[PATCH] refactor: remove unused app configuration fields (● [86e594e](https://github.com/corejslib/app-text-search/commit/86e594e); 👬 zdm)
+
+Compare with the previous release: [v2.2.37...v2.2.38](https://github.com/corejslib/app-text-search/compare/v2.2.37...v2.2.38)
+
 ### v2.2.37 (2026-11-13)
 
 **Other changes:**
